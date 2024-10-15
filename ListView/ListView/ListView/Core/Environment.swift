@@ -20,7 +20,7 @@ class Environment {
         if let envFilePath = Bundle.main.url(forResource: ".env", withExtension: nil)?.path {
             do {
                 // Read the contents of the .env file
-                let envContent = try String(contentsOfFile: envFilePath)
+                let envContent = try String(contentsOfFile: envFilePath,encoding: .utf8)
                 // Split the contents into lines
                 let lines = envContent.split { $0.isNewline }
                 for line in lines {
