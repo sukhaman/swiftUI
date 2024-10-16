@@ -7,13 +7,13 @@
 
 
 @testable import ListView
-import XCTest
+import Testing
 
-class MovieTests: XCTestCase {
+class MovieTests {
 
-    func testMovieInitialization() {
-        let movie = Movie(title: "Inception", genre: "Science Fiction")
-        XCTAssertEqual(movie.title, "Inception")
-        XCTAssertEqual(movie.genre, "Science Fiction")
+    @Test func movieInitialization() {
+        let movie = Movie(id: 1, title: "Inception", originalTitle: "Inception", overview: "", posterPath: nil, backdropPath: nil, releaseDate: "12/04/2022", voteAverage: 3, voteCount: 2, popularity: 21, video: false, adult: false, originalLanguage: "English")
+        #expect(movie.title == "Inception")
+        
     }
 }

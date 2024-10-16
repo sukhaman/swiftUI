@@ -16,10 +16,12 @@ struct MovieListView: View {
                    
                         VStack(spacing:0) {
                             // Popular Movie List View
-                            MovieCategoryListView(movies: viewModel.popularMovies,title: "Popular")
+                            MovieCategoryListView(status: viewModel.popularMoviesStatus,title: "Popular")
                             // Top Rated Movie List View
-                            MovieCategoryListView(movies: viewModel.topRatedMovies,title: "Top Rated")
-                                
+                            MovieCategoryListView(status: viewModel.topRatedMoviesStatus,title: "Top Rated")
+                            // Upcoming Movie List View
+                            MovieCategoryListView(status: viewModel.upcomingMoviesStatus,title: "Upcoming")
+
                         }
                         .padding(.leading,10)
                     

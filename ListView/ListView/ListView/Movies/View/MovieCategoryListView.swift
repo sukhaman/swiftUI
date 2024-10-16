@@ -8,10 +8,18 @@
 import SwiftUI
 
 struct MovieCategoryListView: View {
-    var movies: [Movie] = []
+    var status: NetworkStatus<[Movie]>
     var title: String = ""
     var body: some View {
-       
+        
+        switch status {
+        case .idle:
+            Text("Idle...")
+                .foregroundColor(.gray)
+
+        case .loading:
+            ProgressView("Loading...")
+        case .loaded(let movies):
             VStack(spacing: 0) {
                 HStack {
                     
@@ -47,10 +55,14 @@ struct MovieCategoryListView: View {
                 }
                 .padding(.vertical,10)
             }
+        case .error(let message):
+            Text(message)
+                               .foregroundColor(.red)
+        }
     }
     
 }
 
 #Preview {
-    MovieCategoryListView()
+    MovieCategoryListView(status: .idle)
 }
