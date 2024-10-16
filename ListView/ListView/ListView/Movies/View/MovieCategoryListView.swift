@@ -18,6 +18,7 @@ struct MovieCategoryListView: View {
                     Text(title)
                         .font(.title2)
                         .fontWeight(.bold)
+                        .foregroundStyle(Color.black)
                         .padding(.horizontal)
                     Spacer()
                 }
@@ -29,21 +30,15 @@ struct MovieCategoryListView: View {
                         ForEach(movies) { movie in
                             VStack {
                                 if let posterURL = movie.posterURL {
-                                    AsyncImage(url: posterURL) { image in
-                                        image
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: 100, height: 150)
-                                            .cornerRadius(8)
-                                    } placeholder: {
-                                        ProgressView()
-                                            .frame(width: 100, height: 150)
-                                    }
+                                    CachedAsyncImage(url: posterURL, placeholder: Image(systemName: "photo"), width: 100, height: 150)
                                 }
                                 Text(movie.title)
+                                    .frame(width: 140,height: 40)
                                     .font(.caption)
-                                    .multilineTextAlignment(.leading)
+                                    .foregroundStyle(Color.black)
+                                    .multilineTextAlignment(.center)
                                     .lineLimit(2)
+                                    
                             }
                         }
                     }
@@ -51,9 +46,7 @@ struct MovieCategoryListView: View {
                    
                 }
                 .padding(.vertical,10)
-                
             }
-            .background(Color.white)
     }
     
 }
