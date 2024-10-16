@@ -1,0 +1,18 @@
+// Temporary generated en files for enum Generation
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+// Source: https://github.com/SwiftGen/SwiftGen/discussions/1071#discussioncomment-7209188
+
+
+
+
+
+"Build a sentence" = "Build a Sentence";
+"Select Language" = "Select Language";
+"clear" = "Clear";
+"hello" = "Hello";
+"i" = "I";
+"know" = "Know";
+"sentence" = "Sentence:";
+"speak" = "Speak";
+"you" = "You";
+

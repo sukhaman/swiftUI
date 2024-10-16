@@ -1,0 +1,14 @@
+json:
+  inputs:
+      - TextToSpeech/Resources/Localizable.xcstrings
+  filter: .+\.xcstrings$
+  outputs:
+    templatePath: TextToSpeech/Resources/en-strings.stencil
+      output: TextToSpeech/Resources/generated-en.strings
+
+strings:
+  inputs:
+      - TextToSpeech/Resources/generated-en.strings
+  outputs:
+    templatePath: TextToSpeech/Resources/l21strings.stencil
+        output: TextToSpeech/Resources/Strings+Generated.swift

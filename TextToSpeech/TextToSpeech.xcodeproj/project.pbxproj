@@ -29,9 +29,35 @@
 		A2F123F22CBFFA66001CFF1D /* TextToSpeechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextToSpeechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A2F124152CC0338C001CFF1D /* Exceptions for "TextToSpeech" folder in "TextToSpeech" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Resources/en-strings.stencil",
+				Resources/l21strings.stencil,
+			);
+			target = A2F123D72CBFFA63001CFF1D /* TextToSpeech */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		A2F124162CC0338C001CFF1D /* Exceptions for "TextToSpeech" folder in "Compile Sources" phase from "TextToSpeech" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = A2F123D42CBFFA63001CFF1D /* Sources */;
+			membershipExceptions = (
+				"Resources/en-strings.stencil",
+				Resources/l21strings.stencil,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A2F123DA2CBFFA63001CFF1D /* TextToSpeech */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A2F124152CC0338C001CFF1D /* Exceptions for "TextToSpeech" folder in "TextToSpeech" target */,
+				A2F124162CC0338C001CFF1D /* Exceptions for "TextToSpeech" folder in "Compile Sources" phase from "TextToSpeech" target */,
+			);
 			path = TextToSpeech;
 			sourceTree = "<group>";
 		};
@@ -192,6 +218,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = A2F123CF2CBFFA63001CFF1D;
 			minimizedProjectReferenceProxies = 1;
@@ -328,6 +355,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -384,6 +412,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

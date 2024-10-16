@@ -13,7 +13,7 @@ class TextToSpeechViewModel: ObservableObject {
     @Published var selectedLanguage: String = "en-US"  // Default language
     private var speechSynthesizer = AVSpeechSynthesizer()  // Speech synthesizer
     // Define word categories
-       let subjects = ["I", "You", "We", "The dog", "My friend"]
+    let subjects = [L10n.i, L10n.you, "We", "The dog", "My friend"]
        let verbs = ["need", "like", "want", "have", "go"]
        let objects = ["water", "a book", "help", "food", "a car"]
        let modifiers = ["quickly", "soon", "now", "tomorrow", "today"]
