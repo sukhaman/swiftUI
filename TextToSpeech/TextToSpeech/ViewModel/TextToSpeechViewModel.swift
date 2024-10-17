@@ -56,6 +56,18 @@ class TextToSpeechViewModel: ObservableObject {
         return []
     }
     
+    func setLanguage(_ languageCode: String) {
+         // Update the selected language
+         selectedLanguage = languageCode
+        Bundle.resetLanguage()
+         LocalizationManager.setLanguage(languageCode) // Call to set the language
+        let current = LocalizationManager.currentLanguage
+        print(current)
+        let test = L10n.hello
+        print("Test is \(test)")
+        
+     }
+    
     // Clear the sentence
     func clearSentence() {
         sentence = ""

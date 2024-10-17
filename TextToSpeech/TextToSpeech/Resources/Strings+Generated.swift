@@ -11,23 +11,23 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
   /// Build a Sentence
-  internal static let buildASentence = L10n.tr("Build a sentence", fallback: "Build a Sentence")
+  internal static var buildASentence = L10n.tr("Build a sentence", fallback: "Build a Sentence")
   /// Clear
-  internal static let clear = L10n.tr("clear", fallback: "Clear")
+  internal static var clear = L10n.tr("clear", fallback: "Clear")
   /// Hello
-  internal static let hello = L10n.tr("hello", fallback: "Hello")
+  internal static var hello = L10n.tr("hello", fallback: "Hello")
   /// I
-  internal static let i = L10n.tr("i", fallback: "I")
+  internal static var i = L10n.tr("i", fallback: "I")
   /// Know
-  internal static let know = L10n.tr("know", fallback: "Know")
+  internal static var know = L10n.tr("know", fallback: "Know")
   /// Select Language
-  internal static let selectLanguage = L10n.tr("Select Language", fallback: "Select Language")
+  internal static var selectLanguage = L10n.tr("Select Language", fallback: "Select Language")
   /// Sentence:
-  internal static let sentence = L10n.tr("sentence", fallback: "Sentence:")
+  internal static var sentence = L10n.tr("sentence", fallback: "Sentence:")
   /// Speak
-  internal static let speak = L10n.tr("speak", fallback: "Speak")
+  internal static var speak = L10n.tr("speak", fallback: "Speak")
   /// You
-  internal static let you = L10n.tr("you", fallback: "You")
+  internal static var you = L10n.tr("you", fallback: "You")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

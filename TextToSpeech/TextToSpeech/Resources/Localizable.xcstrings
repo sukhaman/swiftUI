@@ -1,20 +1,8 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%@" : {
-
-    },
-    "%@: %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@: %2$@"
-          }
-        }
-      }
-    },
     "Build a sentence" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -26,6 +14,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Construir Una Oración"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Construire une phrase"
           }
         }
       }
@@ -44,6 +38,12 @@
             "state" : "translated",
             "value" : "Clara/Claro"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Claire/Clair"
+          }
         }
       }
     },
@@ -60,6 +60,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "hola"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bonjour"
           }
         }
       }
@@ -78,6 +84,12 @@
             "state" : "translated",
             "value" : "I"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je"
+          }
         }
       }
     },
@@ -95,6 +107,12 @@
             "state" : "translated",
             "value" : "Saber"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Savoir"
+          }
         }
       }
     },
@@ -111,6 +129,12 @@
             "state" : "translated",
             "value" : "Seleccionar idioma"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sélectionnez la langue"
+          }
         }
       }
     },
@@ -125,8 +149,14 @@
         },
         "es" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Oración"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phrase"
           }
         }
       }
@@ -145,6 +175,12 @@
             "state" : "translated",
             "value" : "Hablar"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Parler"
+          }
         }
       }
     },
@@ -161,6 +197,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tú"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toi"
           }
         }
       }

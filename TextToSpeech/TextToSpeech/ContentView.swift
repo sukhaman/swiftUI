@@ -7,7 +7,37 @@
 
 import SwiftUI
 
+struct ContentView: View {
+    @ObservedObject var viewModel = TextToSpeechViewModel()
+    @State private var languageChanged = false
 
+    var body: some View {
+        VStack {
+            Picker("Select Language", selection: $viewModel.selectedLanguage) {
+                ForEach(viewModel.languages, id: \.1) { (languageName, languageCode) in
+                    Text(languageName)
+                        .tag(languageCode)
+                }
+            }
+            .onChange(of: viewModel.selectedLanguage) { newLanguage in
+                viewModel.setLanguage(newLanguage)
+                languageChanged.toggle() // Trigger a view update
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
+
+            // Example: Localized string using SwiftGen-generated code
+            Text(L10n.hello)
+                .onReceive(NotificationCenter.default.publisher(for: .languageChanged)) { _ in
+                    // React to language change and reload the view
+                    languageChanged.toggle()
+                }
+        }
+    }
+}
+
+
+/*
 struct ContentView: View {
     @StateObject private var viewModel = TextToSpeechViewModel()
     
@@ -24,6 +54,9 @@ struct ContentView: View {
                         ForEach(viewModel.languages, id: \.1) { (languageName, languageCode) in
                             Text(languageName).tag(languageCode)
                         }
+                    }
+                    .onChange(of: viewModel.selectedLanguage) { newLanguage in
+                        viewModel.setLanguage(newLanguage) // Set the language when the selection changes
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
@@ -50,7 +83,11 @@ struct ContentView: View {
                     Spacer()
                     
                     // Display Sentence
-                    Text("\(L10n.sentence): \(viewModel.sentence)")
+                    Text(viewModel.sentence)
+                        .onReceive(NotificationCenter.default.publisher(for: .languageChanged)) { _ in
+                                            // React to language change and reload the view
+                                        
+                                        }
                         .font(.title3)
                         .padding()
                         .multilineTextAlignment(.center)
@@ -59,7 +96,11 @@ struct ContentView: View {
                     Button(action: {
                         viewModel.speakSentence()
                     }) {
-                        Text("\(L10n.speak)")
+                        Text(L10n.speak)
+                            .onReceive(NotificationCenter.default.publisher(for: .languageChanged)) { _ in
+                                                // React to language change and reload the view
+                                            
+                                            }
                             .padding()
                             .frame(maxWidth: geometry.size.width * 0.8)  // Responsive width
                             .background(Color.green)
@@ -114,7 +155,7 @@ struct ContentView: View {
         .padding()
     }
 }
-
+*/
 
 
 
